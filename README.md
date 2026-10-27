@@ -51,6 +51,13 @@
 - `evidence/audit-metrics.json`: summarized **observations**, not firmware.
 - `tests/test_public_arithmetic.py`: runs public arithmetic/consistency checks only; **does not re-run private NAND analysis**.
 
+## Open research questions / 未解決事項をGitHub Issuesで追跡
+
+1. [黄色待機中のセンサーバー正極電圧を基板世代別に確認する](https://github.com/antarashi555/wii-ir-standby-research/issues/1) — no compatible verified voltage measurement.
+2. [STM以外の純正IOSでGPIO8を操作する正規APIがあるか](https://github.com/antarashi555/wii-ir-standby-research/issues/2) — the current negative proof is scoped.
+3. [libogcの安全なDoze復帰と実際の省電力効果を測る](https://github.com/antarashi555/wii-ir-standby-research/issues/3) — no real W measurement yet.
+4. [WC24の安全な命令受信と起床遅延を検証する](https://github.com/antarashi555/wii-ir-standby-research/issues/4) — no reliable command-ingress service established.
+
 ## Reader guidance / 再現性と安全性
 
 NAND/IOS binaries, decrypted ARM modules, keys, device serials, IP addresses, account tokens and personally identifying local paths are deliberately excluded. Do not copy firmware or sensitive dumps into issues or pull requests. **No electrical shorting, return-to-ground bypass, unauthorized fan stop, or unreviewed IOS installation is recommended.**
