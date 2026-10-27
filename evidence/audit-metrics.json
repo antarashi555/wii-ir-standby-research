@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-27",
+  "scope": "read-only local static analysis of owner-authorized stock IOS58 rev6176 and IOS80 rev6944; data here aggregated and non-identifying",
+  "test_environment": "PC-only host",
+  "device_runtime_tests": false,
+  "sensor_positive_voltage_yellow": "unknown_not_measured",
+  "console_wall_watt_measurements": "none",
+  "stm_same_content_observed_in_both_ios": true,
+  "stm_ioctl_u16": {
+    "domain_min": 0,
+    "domain_max": 65535,
+    "tested_inputs": 65536,
+    "recognized_hex": [
+      "0x2001",
+      "0x2002",
+      "0x2003",
+      "0x2004",
+      "0x2005",
+      "0x3001",
+      "0x3002",
+      "0x4001",
+      "0x4002",
+      "0x5001",
+      "0x6001",
+      "0x6002",
+      "0x7001"
+    ],
+    "recognized_count": 13,
+    "default_count": 65523,
+    "u32_exhaustively_tested": false
+  },
+  "stm_direct_acr_register_writers": {
+    "total": 39,
+    "resolved_offsets": 39,
+    "previously_unknown_now_resolved": 14,
+    "counts_by_offset": {
+      "0x01C": 1,
+      "0x020": 1,
+      "0x024": 1,
+      "0x028": 1,
+      "0x0E0": 7,
+      "0x0E4": 1,
+      "0x0FC": 3,
+      "0x18C": 3,
+      "0x190": 4,
+      "0x194": 10,
+      "0x198": 2,
+      "0x1B8": 2,
+      "0x1CC": 1,
+      "0x1DC": 2
+    },
+    "gpio_b_out_0xc0_direct_calls": 0,
+    "gpio_e0_direct_calls": 7,
+    "gpio_owner_fc_direct_calls": 3,
+    "gpio_dir_e4_direct_calls": 1,
+    "observed_gpio_e0_bits": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "dynamic_shift_helper_indirect_callers_excluded": false
+  },
+  "native_ios_devices": {
+    "ios58_tmd_content_records_checked": 19,
+    "ios80_tmd_content_records_checked": 15,
+    "ios58_distinct_dev_path_strings": 32,
+    "ios80_distinct_dev_path_strings": 30,
+    "string_scan_exhaustive_proof": false
+  },
+  "panasonic_frame_model": {
+    "carrier_hz_nominal": 37960,
+    "source_timer_hz_nominal": 1898000,
+    "timer_ticks_per_carrier_cycle": 50,
+    "header_mark_us": 3480,
+    "header_space_us": 1740,
+    "bit_mark_us": 435,
+    "zero_space_us": 435,
+    "one_space_us": 1305,
+    "trail_mark_us": 435,
+    "bits_per_command": 40,
+    "on_hex": "2C52092D24",
+    "on_ones": 14,
+    "on_ideal_frame_us": 52635,
+    "off_hex": "2C52092F26",
+    "off_ones": 16,
+    "off_ideal_frame_us": 54375,
+    "yellow_real_waveform_tested": false
+  },
+  "libogc_idle": {
+    "old_v2_14_0": "idle_func spins while(1)",
+    "new_tuxedo": "KThreadIdleMain spins for(;;)",
+    "dpm_enabled_in_examined_new_upstream_initialization": true,
+    "processor_doze_measured": false,
+    "green_watt_savings_measured": false
+  },
+  "provenance_notes": [
+    "counts came from the owner-local NAND analysis; no raw/private firmware is published",
+    "unit tests in this public repository verify arithmetic/summary consistency only",
+    "absence of a supported STM path is not absolute absence of every possible IOS hardware route"
+  ]
+}
